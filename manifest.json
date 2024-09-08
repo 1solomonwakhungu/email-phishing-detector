@@ -14,6 +14,25 @@
   "action": {
     "default_popup": "popup.html"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://mail.yahoo.com/*",
+        "https://outlook.office.com/*",
+        "https://mail.icloud.com/*",
+        "https://www.icloud.com/mail/*",
+        "https://mail.protonmail.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
   "host_permissions": [
     "https://mail.google.com/*",
     "https://mail.yahoo.com/*",
@@ -28,6 +47,7 @@
     "contextMenus",
     "downloads",
     "pageCapture",
-    "webRequest"
+    "webRequest",
+    "scripting"
   ]
 }
