@@ -8,6 +8,9 @@
     "32": "icons/icon-32.png",
     "48": "icons/icon-48.png"
   },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
   "action": {
     "default_popup": "popup.html"
   },
@@ -23,9 +26,7 @@
     "storage",
     "activeTab",
     "contextMenus",
-    "dns",
     "downloads",
-    "loginState",
     "pageCapture",
     "webRequest"
   ]
