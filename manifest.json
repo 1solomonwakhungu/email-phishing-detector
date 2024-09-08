@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Popup extension that requests permissions",
+  "description": "Extension that includes a popup and requests host permissions and storage permissions .",
+  "version": "1.0",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus",
+    "dns",
+    "downloads",
+    "loginState",
+    "pageCapture",
+    "webRequest"
+  ]
+}
